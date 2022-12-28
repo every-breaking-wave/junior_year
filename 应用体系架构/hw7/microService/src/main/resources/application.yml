@@ -1,0 +1,26 @@
+spring:
+  datasource:
+    driver-class-name: com.mysql.cj.jdbc.Driver
+    url: jdbc:mysql://localhost:3306/ebook
+    username: root
+    password: 123456
+  application:
+    name: book-service
+  jpa:
+    database: mysql
+    show-sql: true
+    hibernate:
+      ddl-auto: update
+
+eureka:
+  instance:
+    prefer-ip-address: true
+    ip-address: localhost
+  client:
+    registerWithEureka: true
+    fetchRegistry: true
+    serviceUrl:
+      defaultZone: http://localhost:8040/eureka
+server:
+  port: 11130
+
